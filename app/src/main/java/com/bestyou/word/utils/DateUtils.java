@@ -1,0 +1,14 @@
+package com.bestyou.word.utils;
+
+public class DateUtils {
+
+    private DateUtils() {
+    }
+
+    public static String formatTime(long duration) {
+        long hour = duration / (60 * 60 * 1000);
+        long min = (duration % (60 * 60 * 1000)) / (60 * 1000);
+        long sec = (duration % (60 * 1000)) / 1000;
+        return (hour != 0 ? hour + "小时" : "") + (min != 0 ? min + "分钟" : "") + sec + "秒";
+    }
+}
